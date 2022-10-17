@@ -1,0 +1,3 @@
+[submodule "raspberrypi-tm1637-4-or-6-digit"]
+	path = raspberrypi-tm1637-4-or-6-digit
+	url = https://github.com/ntrpnr/raspberrypi-tm1637-4-or-6-digit.git

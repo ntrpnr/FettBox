@@ -1,0 +1,16 @@
+---
+driver=<class 'textual.drivers.windows_driver.WindowsDriver'>
+event monitor constructed
+event monitor thread started
+Mount() >>> FettBox(title='Fett Box')
+Mount() >>> DockView(name='DockView#1')
+set_focus Led(name='Led#1')
+MouseDown(x=74, y=6, delta_x=-45, delta_y=-2, button=1) >>> Led(name='Led#1')
+MouseUp(x=74, y=6, button=1) >>> Led(name='Led#1')
+Click(x=74, y=6, button=1) >>> Led(name='Led#1')
+Key(key='ctrl+@') >>> FettBox(title='Fett Box')
+Key(key='ctrl+c') >>> FettBox(title='Fett Box')
+ACTION FettBox(title='Fett Box') quit
+event monitor thread finished
+CLOSED FettBox(title='Fett Box')
+PROCESS END
