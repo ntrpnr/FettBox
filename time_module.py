@@ -20,7 +20,7 @@ class TimeModule(GridView):
         self.led_button = LedButton(name=f"{self.color}_button", color=self.color, pin=self.led_pin)
         self.stopwatch = Stopwatch(name=f"{self.color}_stopwatch", color=self.color, pin=3)
         
-        self.grid.add_column("column", repeat=2, size=10)
+        self.grid.add_column("column", repeat=2, size=8)
         self.grid.add_row("row", repeat=1, size=5)
 
         self.grid.add_widget(self.led_button)
