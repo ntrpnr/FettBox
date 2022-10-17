@@ -8,7 +8,7 @@ from time_module import TimeModule
 class FettBox(App):
 
     async def on_mount(self) -> None:
-        self.red_panel = TimeModule("red_panel", "red", 5, 4)
+        self.red_panel = TimeModule("red_panel", "red", led_pin=5, button_pin=4)
         await self.view.dock(self.red_panel, edge="top")
 
 FettBox.run(title="Fett Box", log="textual.log")
