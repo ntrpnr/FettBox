@@ -4,11 +4,13 @@ event monitor constructed
 event monitor thread started
 Mount() >>> FettBox(title='Fett Box')
 Mount() >>> DockView(name='DockView#1')
+Mount() >>> TimeModule(name='red_panel')
+Mount() >>> TimeModule(name='red_panel')
 set_focus LedButton(name='red_button')
-MouseDown(x=0, y=14, button=1) >>> LedButton(name='red_button')
-MouseUp(x=0, y=14, button=1) >>> LedButton(name='red_button')
-Click(x=0, y=14, button=1) >>> LedButton(name='red_button')
-ButtonPressed(LedButton(name='red_button')) >>> FettBox(title='Fett Box')
+MouseDown(x=0, y=19, button=1) >>> LedButton(name='red_button')
+MouseUp(x=0, y=19, button=1) >>> LedButton(name='red_button')
+Click(x=0, y=19, button=1) >>> LedButton(name='red_button')
+ButtonPressed(LedButton(name='red_button')) >>> TimeModule(name='red_panel')
 Key(key='ctrl+@') >>> FettBox(title='Fett Box')
 Key(key='ctrl+c') >>> FettBox(title='Fett Box')
 ACTION FettBox(title='Fett Box') quit

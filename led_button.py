@@ -32,7 +32,7 @@ class ButtonRenderable:
         )
 
 class LedButton(Widget):
-    def __init__(self, label: RenderableType, name: str, color, pin):
+    def __init__(self, name: str, color, pin):
         self.name = name
         self.label =  "•"
         self.color = color
@@ -57,6 +57,11 @@ class LedButton(Widget):
         self.current_style = f"{self.color} on black"
         self.refresh()
         logging.debug("LED {color} on at {brightness}%".format(color = self.color, brightness = brightness))
+
+    async def set_color(self, color):
+        self.color = color
+        self.current_style = f"{self.color} on black"
+        self.refresh()
 
     async def off(self, abort=True):
         if abort:
