@@ -61,7 +61,7 @@ class Stopwatch(Widget):
 
     async def off(self):
         self.start_time = time.time_ns()
-        self.stop_time = self.start_time()
+        self.stop_time = self.start_time
         self.state = StopwatchState.Off
         logging.debug("{color} stopwatch is off".format(color = self.color))
 

@@ -27,21 +27,8 @@ class TimeModule(GridView):
         self.grid.add_column(repeat=1, fraction=2, name="stopwatch")
         self.grid.add_row("row", repeat=1, fraction=1)
 
-        #self.grid.add_areas(led_button="led_button,1", stopwatch="stopwatch,1")
-
-        #self.layout.place(
-        #    led_button = self.led_button,
-        #    stopwatch = self.stopwatch
-        #)
-
         self.grid.add_widget(self.led_button)
         self.grid.add_widget(self.stopwatch)
-        #self.grid.add_areas()
-
-        asyncio.create_task(self.start())
-
-    # def render(self) -> Panel:
-    #     return Panel(self.led_button, border_style=Style(color=self.color))
 
     async def handle_button_pressed(self, message: ButtonPressed) -> None:
         assert isinstance(message.sender, LedButton)
@@ -49,25 +36,8 @@ class TimeModule(GridView):
         if self.event_callback is not None:
             await self.event_callback(self.color, self.stopwatch.state, self.stopwatch.calculated_time)
 
-        if self.stopwatch.state == StopwatchState.Off:
-            await self.stopwatch.reset()
-        elif self.stopwatch.state == StopwatchState.Reset:
-            await self.stopwatch.start()
-        elif self.stopwatch.state == StopwatchState.Started:
-            await self.stopwatch.stop()
-        elif self.stopwatch.state == StopwatchState.Stopped:
-            await self.stopwatch.reset()
-
     async def start(self):
-        task = asyncio.create_task(self.led_button.start_blink(500))
-        await asyncio.sleep(2)
-        task.cancel()
-        await self.led_button.on()
+        await self.stopwatch.start()
 
-        # task = asyncio.create_task(self.led_button.start_breath(200))
-        # await asyncio.sleep(2)
-        # task.cancel()
-
-        # await led.on(80)
-        # await asyncio.sleep(2)
-        # await led.off()
+    async def off(self):
+        await self.stopwatch.off()

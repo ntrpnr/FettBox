@@ -1,45 +1,123 @@
-INFO:root:red_button
+INFO:root:blue: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: blue
 INFO:root:red: 00:00:00 - StopwatchState.Off
-INFO:root:red: 00:00:00 - StopwatchState.Reset
-INFO:root:red: 00:00:00 - StopwatchState.Started
-INFO:root:red: 00:02:13 - StopwatchState.Stopped
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:blue: 00:00:00 - StopwatchState.Off
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
 INFO:root:red: 00:00:00 - StopwatchState.Off
-INFO:root:red: 00:00:00 - StopwatchState.Reset
+INFO:root:Player joined: red
+INFO:root:yellow: 00:00:00 - StopwatchState.Reset
+INFO:root:Player joined: yellow
+INFO:root:white: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: white
+INFO:root:blue: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: blue
+INFO:root:Start button pressed
+INFO:root:white: 00:00:00 - StopwatchState.Started
+INFO:root:yellow: 00:00:00 - StopwatchState.Started
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: red
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:Start button pressed
+INFO:root:yellow: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: yellow (00:01:92)
+INFO:root:green: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: green (00:03:74)
 INFO:root:red: 00:00:00 - StopwatchState.Started
-INFO:root:red: 00:00:75 - StopwatchState.Stopped
-INFO:root:Start button pressed
-INFO:root:Start button pressed
+INFO:root:Player finished: red (00:04:99)
 INFO:root:Start button pressed
 INFO:root:Can not start
-INFO:root:red: 00:00:00 - StopwatchState.Off
 INFO:root:Start button pressed
-INFO:root:Can start
+INFO:root:Can not start
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
 INFO:root:Start button pressed
-INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:yellow: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: yellow (00:02:83)
+INFO:root:green: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: green (00:04:35)
 INFO:root:Start button pressed
-INFO:root:Can start: <filter object at 0x0000020432F21CF0>
-INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:yellow: 00:00:00 - StopwatchState.Reset
+INFO:root:Player joined: yellow
 INFO:root:Start button pressed
-INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:yellow: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: yellow (00:02:25)
+INFO:root:green: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: green (00:03:27)
 INFO:root:Start button pressed
-INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
 INFO:root:Start button pressed
-INFO:root:Can start: [True, False, False, False, False]
-INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:yellow: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: yellow (00:01:73)
+INFO:root:green: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: green (00:02:84)
 INFO:root:Start button pressed
-INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
 INFO:root:Start button pressed
-INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:yellow: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: yellow (00:01:28)
+INFO:root:green: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: green (00:02:55)
 INFO:root:Start button pressed
-INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
 INFO:root:Start button pressed
-INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:yellow: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: yellow (00:01:12)
+INFO:root:green: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: green (00:01:92)
 INFO:root:Start button pressed
-INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:yellow: 00:01:12 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:green: 00:01:92 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:blue: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: blue
 INFO:root:Start button pressed
-INFO:root:Can start: <filter object at 0x000001C2E5622EC0>
-INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:yellow: 00:01:12 - StopwatchState.Started
+INFO:root:Player finished: yellow (00:01:97)
+INFO:root:green: 00:01:92 - StopwatchState.Started
+INFO:root:Player finished: green (00:02:79)
+INFO:root:blue: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: blue (00:03:91)
 INFO:root:Start button pressed
-INFO:root:Can start: [TimeModule(name='red_panel')]
+INFO:root:blue: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: blue
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
 INFO:root:Start button pressed
-INFO:root:Can start: [TimeModule(name='red_panel'), TimeModule(name='green_panel'), TimeModule(name='yellow_panel')]
+INFO:root:green: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: green (00:01:64)
+INFO:root:blue: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: blue (00:02:64)
+INFO:root:Start button pressed
+INFO:root:green: 00:01:64 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:Start button pressed
+INFO:root:green: 00:01:64 - StopwatchState.Started
+INFO:root:Player finished: green (00:01:27)
+INFO:root:yellow: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: yellow (00:02:05)
+INFO:root:Start button pressed
