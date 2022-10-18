@@ -1,0 +1,45 @@
+INFO:root:red_button
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:red: 00:00:00 - StopwatchState.Reset
+INFO:root:red: 00:00:00 - StopwatchState.Started
+INFO:root:red: 00:02:13 - StopwatchState.Stopped
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:red: 00:00:00 - StopwatchState.Reset
+INFO:root:red: 00:00:00 - StopwatchState.Started
+INFO:root:red: 00:00:75 - StopwatchState.Stopped
+INFO:root:Start button pressed
+INFO:root:Start button pressed
+INFO:root:Start button pressed
+INFO:root:Can not start
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Start button pressed
+INFO:root:Can start
+INFO:root:Start button pressed
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Start button pressed
+INFO:root:Can start: <filter object at 0x0000020432F21CF0>
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Start button pressed
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Start button pressed
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Start button pressed
+INFO:root:Can start: [True, False, False, False, False]
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Start button pressed
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Start button pressed
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Start button pressed
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Start button pressed
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Start button pressed
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Start button pressed
+INFO:root:Can start: <filter object at 0x000001C2E5622EC0>
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Start button pressed
+INFO:root:Can start: [TimeModule(name='red_panel')]
+INFO:root:Start button pressed
+INFO:root:Can start: [TimeModule(name='red_panel'), TimeModule(name='green_panel'), TimeModule(name='yellow_panel')]

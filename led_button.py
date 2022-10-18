@@ -1,6 +1,7 @@
 import asyncio
 import logging, sys
 from time import sleep
+from typing import Any, Awaitable, Callable
 #logging.basicConfig(stream=sys.stderr, level=logging.DEBUG)
 
 from rich.panel import Panel
@@ -12,6 +13,8 @@ from textual.widget import Widget
 from textual import events
 from textual.message import Message
 from textual.reactive import Reactive
+from rich.padding import Padding
+AsyncFuncType = Callable[[Any, Any], Awaitable[Any]]
 
 class ButtonPressed(Message, bubble=True):
     pass
@@ -24,21 +27,29 @@ class ButtonRenderable:
     def __rich_console__(
         self, console: Console, options: ConsoleOptions
     ) -> RenderResult:
-        width = options.max_width
-        height = options.height or 1
+        #width = options.max_width
+        #height = options.height or 1
 
-        yield Align.left(
-            self.label, vertical="middle", style=self.style, width=width, height=height
+        yield Padding(
+            Align.right(self.label, vertical="top"),
+            (1, 1),
+            style=self.style,
         )
 
+        # return Padding(
+        #     Align.right(
+        #         self.label, vertical="middle"
+        #     ), (0,1), style=self.style
+        # )
+
 class LedButton(Widget):
-    def __init__(self, name: str, color, pin):
+    def __init__(self, name: str, color, pin, label =  "•", event_callback: AsyncFuncType = None):
         self.name = name
-        self.label =  "•"
+        self.label =  label
         self.color = color
-        self.pin = pin        
-        self.current_text = "•"
-        self.current_style = "on black"
+        self.pin = pin
+        self.event_callback = event_callback
+        self.current_style = f"{color} on black"
         super().__init__(name = name)
     
     # def render(self) -> Panel:
@@ -49,6 +60,8 @@ class LedButton(Widget):
 
     async def on_click(self, event: events.Click) -> None:
         event.prevent_default().stop()
+        if self.event_callback is not None:
+            await self.event_callback()
         await self.emit(ButtonPressed(self))
 
     async def on(self, brightness = 100, abort=True):

@@ -7,6 +7,7 @@ from rich.align import Align
 from timeit import repeat
 from textual.widget import Widget
 from rich.text import Text
+from rich.padding import Padding
 #logging.basicConfig(stream=sys.stderr, level=logging.DEBUG)
 
 class Stopwatch(Widget):
@@ -14,13 +15,14 @@ class Stopwatch(Widget):
         self.name = name
         self.color = color
         self.pin = pin
+        self.calculated_time = "00:00:00"
         self.current_style = f"{self.color} on black"
         self.start_time = time.time_ns()
         self.state = StopwatchState.Off
         super().__init__(name = name)
 
     def on_mount(self):
-        self.state = StopwatchState.Reset
+        self.state = StopwatchState.Off
         self.set_interval(.1234, self.refresh)
 
     def render(self):
@@ -34,7 +36,13 @@ class Stopwatch(Widget):
             display = self.time_convert(time.time_ns() - self.start_time)
         
         text = Text(display, style=f"{self.color} on black")
-        return Align.right(text, vertical="middle")
+        #return Padding(Align.left(text, vertical="middle"), (1,0), style=self.style)
+
+        return Padding(
+            Align.left(text, vertical="top"),
+            (1, 1),
+            style=f"{self.color} on black",
+        )
 
     def time_convert(self, ns):
         hundredths = ns // 10000000
