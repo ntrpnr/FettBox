@@ -43,12 +43,12 @@ class ButtonRenderable:
         # )
 
 class LedButton(Widget):
-    def __init__(self, name: str, color, pin, label =  "•", event_callback: AsyncFuncType = None):
+    def __init__(self, name: str, color, pin, label =  "⬤", button_callback: AsyncFuncType = None):
         self.name = name
         self.label =  label
         self.color = color
         self.pin = pin
-        self.event_callback = event_callback
+        self.event_callback = button_callback
         self.current_style = f"{color} on black"
         super().__init__(name = name)
     

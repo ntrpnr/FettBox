@@ -7,7 +7,7 @@ import asyncio
 from stopwatch import StopwatchState
 logging.basicConfig(filename="log.txt", level=logging.INFO)
 
-from time_module import TimeModule
+from player_module import TimeModule
 
 class FettBox(App):
 
@@ -15,26 +15,20 @@ class FettBox(App):
         
         self.game = Game()
 
-        self.game.add_time_module(TimeModule("red_panel", "red", led_pin=5, button_pin=4, event_callback=self.time_module_callback))
-        self.game.add_time_module(TimeModule("blue_panel", "blue", led_pin=5, button_pin=4, event_callback=self.time_module_callback))
-        self.game.add_time_module(TimeModule("green_panel", "green", led_pin=5, button_pin=4, event_callback=self.time_module_callback))
-        self.game.add_time_module(TimeModule("yellow_panel", "yellow", led_pin=5, button_pin=4, event_callback=self.time_module_callback))
-        self.game.add_time_module(TimeModule("white_panel", "white", led_pin=5, button_pin=4, event_callback=self.time_module_callback))
+        self.game.add_player_module(TimeModule("red_panel", "red", led_pin=5, button_pin=4))
+        self.game.add_player_module(TimeModule("blue_panel", "blue", led_pin=5, button_pin=4))
+        self.game.add_player_module(TimeModule("green_panel", "green", led_pin=5, button_pin=4))
+        self.game.add_player_module(TimeModule("yellow_panel", "yellow", led_pin=5, button_pin=4))
+        self.game.add_player_module(TimeModule("white_panel", "white", led_pin=5, button_pin=4))
 
         top_grid = TopGrid(*self.game.time_modules)
 
-        self.start_button = LedButton("start_button", "white", 6, "START", event_callback=self.start_button_callback)
+        self.start_button = LedButton("start_button", "white", 6, "START", button_callback=self.start_button_callback)
         await self.start_button.on()
         
         await self.view.dock(top_grid, self.start_button, edge="top")
 
-    async def time_module_callback(self, color, state: StopwatchState, time):
-        logging.info(f"{color}: {time} - {state}")
-        state = self.game.get_state()
-        if state is GameState.WaitingForPlayers or state is GameState.Ready:
-            await self.game.join_player(color)
-        elif state is GameState.Started:
-            await self.game.finish_player(color)
+    
 
     async def start_button_callback(self):
         logging.info(f"Start button pressed")

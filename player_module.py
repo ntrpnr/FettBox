@@ -11,12 +11,12 @@ from stopwatch import Stopwatch, StopwatchState
 AsyncFuncType = Callable[[Any, Any], Awaitable[Any]]
 
 class TimeModule(GridView):
-    def __init__(self, name: str, color, led_pin, button_pin, event_callback: AsyncFuncType = None):
+    def __init__(self, name: str, color, led_pin, button_pin, button_callback: AsyncFuncType = None):
         self.name = name
         self.color = color
         self.led_pin = led_pin
         self.button_pin = button_pin
-        self.event_callback = event_callback
+        self.button_callback = button_callback
         super().__init__(name = name)
 
     async def on_mount(self) -> None:
@@ -33,8 +33,8 @@ class TimeModule(GridView):
     async def handle_button_pressed(self, message: ButtonPressed) -> None:
         assert isinstance(message.sender, LedButton)
 
-        if self.event_callback is not None:
-            await self.event_callback(self.color, self.stopwatch.state, self.stopwatch.calculated_time)
+        if self.button_callback is not None:
+            await self.button_callback(self.color, self.stopwatch.state, self.stopwatch.calculated_time)
 
     async def start(self):
         await self.stopwatch.start()

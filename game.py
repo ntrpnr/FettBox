@@ -1,7 +1,7 @@
 from enum import Enum
 
 from stopwatch import StopwatchState
-from time_module import TimeModule
+from player_module import TimeModule
 import logging, sys
 import asyncio
 
@@ -11,8 +11,17 @@ class Game:
         self.time_modules = []
         self.finished_players = {}
 
-    def add_time_module(self, module: TimeModule):
+    def add_player_module(self, module: TimeModule):
+        module.button_callback = self.player_button_pressed
         self.time_modules.append(module)
+
+    async def player_button_pressed(self, color, state: StopwatchState, time):
+        logging.info(f"{color}: {time} - {state}")
+        state = self.get_state()
+        if state is GameState.WaitingForPlayers or state is GameState.Ready:
+            await self.join_player(color)
+        elif state is GameState.Started:
+            await self.finish_player(color)
 
     async def join_player(self, color):
         logging.info(f"Player joined: {color}")
