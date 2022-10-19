@@ -5,6 +5,7 @@ import logging, sys
 from textual.views import GridView
 import asyncio
 from stopwatch import StopwatchState
+from voice import Voice
 logging.basicConfig(filename="log.txt", level=logging.INFO)
 
 from player_module import TimeModule
@@ -20,6 +21,7 @@ class FettBox(App):
         self.game.add_player_module(TimeModule("green_panel", "green", led_pin=5, button_pin=4))
         self.game.add_player_module(TimeModule("yellow_panel", "yellow", led_pin=5, button_pin=4))
         self.game.add_player_module(TimeModule("white_panel", "white", led_pin=5, button_pin=4))
+        self.voice = Voice()
 
         top_grid = TopGrid(*self.game.time_modules)
 
@@ -32,6 +34,7 @@ class FettBox(App):
 
     async def start_button_callback(self):
         logging.info(f"Start button pressed")
+        asyncio.tasks.create_task(self.voice.speak("Game is starting"))
         state = self.game.get_state()
         if state is GameState.Ready:
             await self.game.start_game()

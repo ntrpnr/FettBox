@@ -194,3 +194,106 @@ INFO:root:yellow: 00:10:00 - StopwatchState.Stopped
 INFO:root:yellow: 00:10:00 - StopwatchState.Stopped
 INFO:root:yellow: 00:10:00 - StopwatchState.Stopped
 INFO:root:Start button pressed
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:white: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: white
+INFO:root:Start button pressed
+INFO:root:Start button pressed
+INFO:root:Can not start
+INFO:root:Start button pressed
+INFO:root:Can not start
+INFO:comtypes.client._code_cache:Could not import comtypes.gen, trying to create it.
+INFO:comtypes.client._code_cache:Created comtypes.gen directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:comtypes.client._code_cache:Writing __init__.py file: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen\__init__.py'
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:comtypes.client._generate:Could not import comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4: No module named 'comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4'
+INFO:comtypes.client._generate:# Generating comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4
+INFO:comtypes.client._generate:Could not import comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0: No module named 'comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0'
+INFO:comtypes.client._generate:# Generating comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0
+INFO:comtypes.client._generate:Could not import comtypes.gen.stdole: No module named 'comtypes.gen.stdole'
+INFO:comtypes.client._generate:# Generating comtypes.gen.stdole
+INFO:comtypes.client._generate:Could not import comtypes.gen.SpeechLib: No module named 'comtypes.gen.SpeechLib'
+INFO:comtypes.client._generate:# Generating comtypes.gen.SpeechLib
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:Start button pressed
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:Start button pressed
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:Start button pressed
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:blue: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: blue
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:Start button pressed
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:Start button pressed
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:Start button pressed
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-277' coro=<Voice.speak() done, defined at C:\Users\Erik\source\repos\FettBox\voice.py:9> exception=AttributeError("'Voice' object has no attribute '_Voice__run'")>
+Traceback (most recent call last):
+  File "C:\Users\Erik\source\repos\FettBox\voice.py", line 11, in speak
+    target=self.__run, args=(text), daemon=True
+AttributeError: 'Voice' object has no attribute '_Voice__run'
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:Start button pressed
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:Start button pressed
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:Start button pressed
+INFO:root:Can not start
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:Start button pressed
+INFO:root:Can not start
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:Start button pressed
+INFO:root:Can not start
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:Start button pressed
+INFO:root:Can not start
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:Start button pressed
+INFO:root:Can not start
