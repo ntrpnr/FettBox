@@ -5,9 +5,12 @@ from player_module import TimeModule
 import logging, sys
 import asyncio
 
+from voice import Voice
+
 
 class Game:
-    def __init__(self):
+    def __init__(self, voice: Voice):
+        self.voice = voice
         self.time_modules = []
         self.finished_players = {}
 
@@ -25,6 +28,7 @@ class Game:
 
     async def join_player(self, color):
         logging.info(f"Player joined: {color}")
+        await self.voice.speak(f"{color} player joined the game.")
         player: TimeModule = list(filter(lambda x: (x.stopwatch.color is color), self.time_modules))[0]
         await player.stopwatch.reset()
     

@@ -4,6 +4,7 @@ from textual.app import App
 import logging, sys
 from textual.views import GridView
 import asyncio
+from music_player import MusicPlayer
 from stopwatch import StopwatchState
 from voice import Voice
 logging.basicConfig(filename="log.txt", level=logging.INFO)
@@ -14,14 +15,17 @@ class FettBox(App):
 
     async def on_mount(self) -> None:
         
-        self.game = Game()
+        self.voice = Voice()
+        self.game = Game(self.voice)
+        self.music_player = MusicPlayer()
+        self.music_player.f1Theme()
 
         self.game.add_player_module(TimeModule("red_panel", "red", led_pin=5, button_pin=4))
         self.game.add_player_module(TimeModule("blue_panel", "blue", led_pin=5, button_pin=4))
         self.game.add_player_module(TimeModule("green_panel", "green", led_pin=5, button_pin=4))
         self.game.add_player_module(TimeModule("yellow_panel", "yellow", led_pin=5, button_pin=4))
         self.game.add_player_module(TimeModule("white_panel", "white", led_pin=5, button_pin=4))
-        self.voice = Voice()
+        
 
         top_grid = TopGrid(*self.game.time_modules)
 
