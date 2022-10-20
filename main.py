@@ -15,9 +15,9 @@ class FettBox(App):
 
     async def on_mount(self) -> None:
         
-        self.voice = Voice()
-        self.game = Game(self.voice)
         self.music_player = MusicPlayer()
+        self.voice = Voice(self.music_player)
+        self.game = Game(self.voice)        
         self.music_player.f1Theme()
 
         self.game.add_player_module(TimeModule("red_panel", "red", led_pin=5, button_pin=4))
