@@ -19,7 +19,10 @@ class Game:
         self.time_modules.append(module)
 
     async def blink_player_buttons(self):
-        [await asyncio.tasks.ensure_future(time_module.led_button.start_blink(500)) for time_module in self.time_modules]
+        [await asyncio.tasks.create_task(time_module.led_button.start_blink(500)) for time_module in self.time_modules]
+
+    async def turn_off_non_playing(self):
+        [await asyncio.tasks.create_task(player.led_button.off()) for player in self.get_players_not_playing()]
 
     async def start_button_pressed(self):
         logging.info(f"Start button pressed")        
@@ -55,6 +58,7 @@ class Game:
         self.finished_players[color] = player.stopwatch.calculated_time
 
     async def start_game(self):
+        await self.turn_off_non_playing()
         [await player.start() for player in self.get_players_ready()]
 
     async def reset_game(self):
@@ -71,6 +75,9 @@ class Game:
 
     def get_players_ready(self):
         return list(filter(lambda x: (x.stopwatch.state == StopwatchState.Reset), self.time_modules))
+
+    def get_players_not_playing(self):
+        return list(filter(lambda x: (x.stopwatch.state == StopwatchState.Off), self.time_modules))
 
     def get_state(self):
         players_started = self.get_players_started()
