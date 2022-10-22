@@ -1,3 +1,5 @@
+from copyreg import dispatch_table
+from display import Display, Media
 from game import Game, GameState
 from led_button import ButtonPressed, LedButton
 from textual.app import App
@@ -19,6 +21,8 @@ class FettBox(App):
         self.voice = Voice(self.music_player)
         self.game = Game(self.voice)        
         self.music_player.f1Theme()
+        self.led_matrix = Display()
+        self.led_matrix.show(Media.StartSequence)
 
         self.game.add_player_module(TimeModule("red_panel", "red", led_pin=5, button_pin=4))
         self.game.add_player_module(TimeModule("blue_panel", "blue", led_pin=5, button_pin=4))
