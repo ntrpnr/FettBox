@@ -524,3 +524,121 @@ INFO:root:Start button pressed
 INFO:root:Can not start
 INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
 INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:Start button pressed
+INFO:root:Can not start
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:Start button pressed
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:Start button pressed
+INFO:root:Can not start
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-30' coro=<Game.blink_player_buttons() done, defined at C:\Users\Erik\source\repos\FettBox\game.py:21> exception=AttributeError("module 'asyncio' has no attribute 'time_module'")>
+Traceback (most recent call last):
+  File "C:\Users\Erik\source\repos\FettBox\game.py", line 22, in blink_player_buttons
+    [await asyncio. time_module.led_button.start_blink(500) for time_module in self.time_modules]
+  File "C:\Users\Erik\source\repos\FettBox\game.py", line 22, in <listcomp>
+    [await asyncio. time_module.led_button.start_blink(500) for time_module in self.time_modules]
+AttributeError: module 'asyncio' has no attribute 'time_module'
+INFO:root:Start button pressed
+INFO:root:Can not start
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-44' coro=<Game.blink_player_buttons() done, defined at C:\Users\Erik\source\repos\FettBox\game.py:21> exception=AttributeError("module 'asyncio' has no attribute 'time_module'")>
+Traceback (most recent call last):
+  File "C:\Users\Erik\source\repos\FettBox\game.py", line 22, in blink_player_buttons
+    [await asyncio. time_module.led_button.start_blink(500) for time_module in self.time_modules]
+  File "C:\Users\Erik\source\repos\FettBox\game.py", line 22, in <listcomp>
+    [await asyncio. time_module.led_button.start_blink(500) for time_module in self.time_modules]
+AttributeError: module 'asyncio' has no attribute 'time_module'
+INFO:root:Start button pressed
+INFO:root:Can not start
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-53' coro=<Game.blink_player_buttons() done, defined at C:\Users\Erik\source\repos\FettBox\game.py:21> exception=AttributeError("module 'asyncio' has no attribute 'time_module'")>
+Traceback (most recent call last):
+  File "C:\Users\Erik\source\repos\FettBox\game.py", line 22, in blink_player_buttons
+    [await asyncio. time_module.led_button.start_blink(500) for time_module in self.time_modules]
+  File "C:\Users\Erik\source\repos\FettBox\game.py", line 22, in <listcomp>
+    [await asyncio. time_module.led_button.start_blink(500) for time_module in self.time_modules]
+AttributeError: module 'asyncio' has no attribute 'time_module'
+INFO:root:Start button pressed
+INFO:root:Can not start
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-64' coro=<Game.blink_player_buttons() done, defined at C:\Users\Erik\source\repos\FettBox\game.py:21> exception=AttributeError("module 'asyncio' has no attribute 'time_module'")>
+Traceback (most recent call last):
+  File "C:\Users\Erik\source\repos\FettBox\game.py", line 22, in blink_player_buttons
+    [await asyncio. time_module.led_button.start_blink(500) for time_module in self.time_modules]
+  File "C:\Users\Erik\source\repos\FettBox\game.py", line 22, in <listcomp>
+    [await asyncio. time_module.led_button.start_blink(500) for time_module in self.time_modules]
+AttributeError: module 'asyncio' has no attribute 'time_module'
+INFO:root:Start button pressed
+INFO:root:Can not start
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-87' coro=<Game.blink_player_buttons() done, defined at C:\Users\Erik\source\repos\FettBox\game.py:21> exception=AttributeError("module 'asyncio' has no attribute 'time_module'")>
+Traceback (most recent call last):
+  File "C:\Users\Erik\source\repos\FettBox\game.py", line 22, in blink_player_buttons
+    [await asyncio. time_module.led_button.start_blink(500) for time_module in self.time_modules]
+  File "C:\Users\Erik\source\repos\FettBox\game.py", line 22, in <listcomp>
+    [await asyncio. time_module.led_button.start_blink(500) for time_module in self.time_modules]
+AttributeError: module 'asyncio' has no attribute 'time_module'
+INFO:root:Start button pressed
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: red
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: red
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:Start button pressed
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: red
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:blue: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: blue
+INFO:root:Start button pressed
+INFO:root:Start button pressed
+INFO:root:red: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: red
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:blue: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: blue
+INFO:root:blue: 00:00:00 - StopwatchState.Reset
+INFO:root:Player joined: blue
+INFO:root:Start button pressed
+INFO:root:Start button pressed
+INFO:root:Can not start
+INFO:root:Start button pressed
+INFO:root:Can not start
+INFO:root:blue: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: blue
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:Start button pressed
+INFO:root:Start button pressed
+INFO:root:Can not start
+INFO:root:blue: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: blue
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:root:Start button pressed
+INFO:root:Can not start
+INFO:root:blue: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: blue
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:Start button pressed
+INFO:root:Can not start
+INFO:root:blue: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: blue
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:Start button pressed

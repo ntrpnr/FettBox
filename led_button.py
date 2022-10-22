@@ -1,5 +1,6 @@
 import asyncio
 import logging, sys
+import threading
 from time import sleep
 from typing import Any, Awaitable, Callable
 #logging.basicConfig(stream=sys.stderr, level=logging.DEBUG)
@@ -48,8 +49,9 @@ class LedButton(Widget):
         self.label =  label
         self.color = color
         self.pin = pin
+        self.thread = threading.Thread()
         self.event_callback = button_callback
-        self.current_style = f"{color} on black"
+        self.current_style = f"black on black"
         super().__init__(name = name)
     
     # def render(self) -> Panel:
@@ -86,12 +88,19 @@ class LedButton(Widget):
     async def start_blink(self, ms):
         self.__abort()
         self.is_blinking = True
+
+        self.thread = threading.Thread(
+            target=asyncio.run, args=(self.__start_blink(ms),), daemon=True
+        ).start()
+        
+        #logging.debug("LED {color} blink stop".format(color = self.color))
+
+    async def __start_blink(self, ms):
         while(self.is_blinking):
             await self.on(abort=False)
             await asyncio.sleep(ms/1000)
             await self.off(abort=False)
             await asyncio.sleep(ms/1000)
-        logging.debug("LED {color} blink stop".format(color = self.color))
 
     async def start_breath(self, ms):
         raise NotImplementedError()
@@ -113,5 +122,7 @@ class LedButton(Widget):
     def __abort(self):
         self.is_blinking = False
         self.is_breathing = False
+        while self.thread is not None and self.thread.is_alive():
+            sleep(.1)
 
 

@@ -41,15 +41,8 @@ class FettBox(App):
     
 
     async def start_button_callback(self):
-        logging.info(f"Start button pressed")
-        asyncio.tasks.create_task(self.voice.speak("Game is starting"))
-        state = self.game.get_state()
-        if state is GameState.Ready:
-            await self.game.start_game()
-        elif state is GameState.Stopped:
-            await self.game.reset_game()
-        else:
-            logging.info("Can not start")
+        await self.game.start_button_pressed()
+        
 
 
 class TopGrid(GridView):
