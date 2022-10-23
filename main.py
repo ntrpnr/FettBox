@@ -19,10 +19,10 @@ class FettBox(App):
         
         self.music_player = MusicPlayer()
         self.voice = Voice(self.music_player)
-        self.game = Game(self.voice)        
-        self.music_player.f1Theme()
         self.led_matrix = Display()
-        self.led_matrix.show(Media.StartSequence)
+        self.game = Game(self.voice, self.led_matrix)        
+        self.music_player.f1Theme()
+        
 
         self.game.add_player_module(PlayerModule("red_panel", "red", led_pin=5, button_pin=4))
         self.game.add_player_module(PlayerModule("blue_panel", "blue", led_pin=5, button_pin=4))

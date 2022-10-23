@@ -1,4 +1,5 @@
 from enum import Enum
+from display import Display, Media
 
 from stopwatch import StopwatchState
 from player_module import PlayerModule
@@ -10,8 +11,9 @@ from voice import Voice
 
 
 class Game:
-    def __init__(self, voice: Voice):
+    def __init__(self, voice: Voice, led_matrix: Display):
         self.voice = voice
+        self.led_matrix = led_matrix
         self.time_modules = []
         self.finished_players = {}
 
@@ -59,9 +61,14 @@ class Game:
         self.finished_players[color] = player.stopwatch.calculated_time
 
     async def start_game(self):
-        await self.turn_off_non_playing()
+        await self.turn_off_non_playing()        
+        self.led_matrix.show(Media.StartSequence, callback=self.start_timers)        
+
+    async def start_timers(self):
         start_time = time.time_ns()
         [await player.start(start_time) for player in self.get_players_ready()]
+    #async def start_formation_lap(self):
+
 
     async def reset_game(self):
         [await time_module.off() for time_module in self.time_modules]

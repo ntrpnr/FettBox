@@ -1,22 +1,25 @@
+from ast import Call
 import sys
 import threading
 from PyQt5.QtCore import pyqtSignal, Qt, QThread
 from PyQt5.QtGui    import QMovie
 from PyQt5.QtWidgets import QApplication, QSplashScreen, QMainWindow
-
+from typing import Callable
+import asyncio
 
 class Window(QMainWindow):
     def __init__(self):
         super().__init__()
 
 class SplashScreen(QSplashScreen):
-    def __init__(self, filepath, flags=0):
+    def __init__(self, filepath, callback:Callable, flags=0):
         super().__init__(flags=Qt.WindowFlags(flags))
         self.movie = QMovie(filepath, parent=self)
-        self.movie.frameChanged.connect(self.handleFrameChange)
+        self.callback = callback
+        self.movie.frameChanged.connectAsync(self.handleFrameChange)
         self.movie.start()
 
-    def handleFrameChange(self):
+    async def handleFrameChange(self):
         pixmap = self.movie.currentPixmap()
         self.setPixmap(pixmap)
         self.setMask(pixmap.mask())
@@ -24,6 +27,8 @@ class SplashScreen(QSplashScreen):
             try:
                 self.movie.stop()
                 self.close()
+                if self.callback is not None:
+                    await self.callback()
             except Exception:
                 pass
 
@@ -35,15 +40,15 @@ class Display:
     def __init__(self):
         self.thread: threading.Thread = None
 
-    def show(self, media: Media):       
-        
+    def show(self, media: Media, callback:Callable=None):
+
         self.thread = threading.Thread(
-            target=self.__show, args=(media,), daemon=True
+            target=self.__show, args=(media,callback), daemon=True
         ).start()
 
-    def __show(self, media):
+    def __show(self, media, callback:Callable):
         app = QApplication(sys.argv)
-        splash = SplashScreen(media, Qt.WindowStaysOnTopHint)
+        splash = SplashScreen(media, callback, Qt.WindowStaysOnTopHint)
         splash.show()
         app.exec_()
 
