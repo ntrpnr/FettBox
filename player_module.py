@@ -10,7 +10,7 @@ from led_button import ButtonPressed, LedButton
 from stopwatch import Stopwatch, StopwatchState
 AsyncFuncType = Callable[[Any, Any], Awaitable[Any]]
 
-class TimeModule(GridView):
+class PlayerModule(GridView):
     def __init__(self, name: str, color, led_pin, button_pin, button_callback: AsyncFuncType = None):
         self.name = name
         self.color = color
@@ -36,8 +36,8 @@ class TimeModule(GridView):
         if self.button_callback is not None:
             await self.button_callback(self.color, self.stopwatch.state, self.stopwatch.calculated_time)
 
-    async def start(self):
-        await self.stopwatch.start()
+    async def start(self, start_time):
+        await self.stopwatch.start(start_time)
 
     async def off(self):
         await self.stopwatch.off()

@@ -23,7 +23,7 @@ class Stopwatch(Widget):
 
     def on_mount(self):
         self.state = StopwatchState.Off
-        self.set_interval(.1234, self.refresh)
+        self.set_interval(.0123, self.refresh)
 
     def render(self):
         if self.state == StopwatchState.Off:
@@ -65,8 +65,8 @@ class Stopwatch(Widget):
         self.state = StopwatchState.Off
         logging.debug("{color} stopwatch is off".format(color = self.color))
 
-    async def start(self):
-        self.start_time = time.time_ns()
+    async def start(self, start_time = time.time_ns()):
+        self.start_time = start_time
         self.state = StopwatchState.Started
         logging.debug("{color} stopwatch started".format(color = self.color))
 

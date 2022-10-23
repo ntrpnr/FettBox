@@ -11,7 +11,7 @@ from stopwatch import StopwatchState
 from voice import Voice
 logging.basicConfig(filename="log.txt", level=logging.INFO)
 
-from player_module import TimeModule
+from player_module import PlayerModule
 
 class FettBox(App):
 
@@ -24,11 +24,11 @@ class FettBox(App):
         self.led_matrix = Display()
         self.led_matrix.show(Media.StartSequence)
 
-        self.game.add_player_module(TimeModule("red_panel", "red", led_pin=5, button_pin=4))
-        self.game.add_player_module(TimeModule("blue_panel", "blue", led_pin=5, button_pin=4))
-        self.game.add_player_module(TimeModule("green_panel", "green", led_pin=5, button_pin=4))
-        self.game.add_player_module(TimeModule("yellow_panel", "yellow", led_pin=5, button_pin=4))
-        self.game.add_player_module(TimeModule("white_panel", "white", led_pin=5, button_pin=4))
+        self.game.add_player_module(PlayerModule("red_panel", "red", led_pin=5, button_pin=4))
+        self.game.add_player_module(PlayerModule("blue_panel", "blue", led_pin=5, button_pin=4))
+        self.game.add_player_module(PlayerModule("green_panel", "green", led_pin=5, button_pin=4))
+        self.game.add_player_module(PlayerModule("yellow_panel", "yellow", led_pin=5, button_pin=4))
+        self.game.add_player_module(PlayerModule("white_panel", "white", led_pin=5, button_pin=4))
         
 
         top_grid = TopGrid(*self.game.time_modules)

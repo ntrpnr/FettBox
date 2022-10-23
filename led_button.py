@@ -49,6 +49,8 @@ class LedButton(Widget):
         self.label =  label
         self.color = color
         self.pin = pin
+        self.is_breathing = False
+        self.is_blinking = False
         self.thread = threading.Thread()
         self.event_callback = button_callback
         self.current_style = f"black on black"
@@ -68,7 +70,8 @@ class LedButton(Widget):
 
     async def on(self, brightness = 100, abort=True):
         if abort:
-            self.__abort()
+            task = asyncio.create_task(self.__abort())
+            await task
         self.current_style = f"{self.color} on black"
         self.refresh()
         logging.debug("LED {color} on at {brightness}%".format(color = self.color, brightness = brightness))
@@ -80,13 +83,13 @@ class LedButton(Widget):
 
     async def off(self, abort=True):
         if abort:
-            self.__abort()
+            await self.__abort()
         self.current_style = f"black on black"
         self.refresh()
         logging.debug("LED {color} off".format(color = self.color))
 
     async def start_blink(self, ms):
-        self.__abort()
+        await self.__abort()
         self.is_blinking = True
 
         self.thread = threading.Thread(
@@ -119,10 +122,14 @@ class LedButton(Widget):
                 await asyncio.sleep(ms/100000)
         logging.debug("LED {color} stopped breathing".format(color = self.color))
 
-    def __abort(self):
-        self.is_blinking = False
-        self.is_breathing = False
-        while self.thread is not None and self.thread.is_alive():
-            sleep(.1)
+    async def __abort(self):
+        if self.is_blinking or self.is_breathing:
+            self.is_blinking = False
+            self.is_breathing = False
+            if self.thread is not None and self.thread.is_alive():
+                self.thread.join()
+            self.refresh()
+            await asyncio.sleep(.501)
+            logging.debug("Abort {color} finihsed".format(color = self.color))
 
 
