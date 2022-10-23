@@ -1,7 +1,7 @@
 from ast import Call
 import sys
 import threading
-from PyQt5.QtCore import pyqtSignal, Qt, QThread
+from PyQt5.QtCore import pyqtSignal, Qt, QThread, qInstallMessageHandler
 from PyQt5.QtGui    import QMovie
 from PyQt5.QtWidgets import QApplication, QSplashScreen, QMainWindow
 from typing import Callable
@@ -16,10 +16,10 @@ class SplashScreen(QSplashScreen):
         super().__init__(flags=Qt.WindowFlags(flags))
         self.movie = QMovie(filepath, parent=self)
         self.callback = callback
-        self.movie.frameChanged.connectAsync(self.handleFrameChange)
+        self.movie.frameChanged.connect(self.handleFrameChange)
         self.movie.start()
 
-    async def handleFrameChange(self):
+    def handleFrameChange(self):
         pixmap = self.movie.currentPixmap()
         self.setPixmap(pixmap)
         self.setMask(pixmap.mask())
@@ -28,7 +28,7 @@ class SplashScreen(QSplashScreen):
                 self.movie.stop()
                 self.close()
                 if self.callback is not None:
-                    await self.callback()
+                    self.callback()
             except Exception:
                 pass
 
@@ -39,6 +39,11 @@ class Media:
 class Display:
     def __init__(self):
         self.thread: threading.Thread = None
+
+        def handler(msg_type, msg_log_context, msg_string):
+            pass
+
+        qInstallMessageHandler(handler)
 
     def show(self, media: Media, callback:Callable=None):
 

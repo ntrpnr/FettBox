@@ -15,6 +15,7 @@ class Game:
         self.voice = voice
         self.led_matrix = led_matrix
         self.time_modules = []
+        self.lights_are_out = False
         self.finished_players = {}
 
     def add_player_module(self, module: PlayerModule):
@@ -32,7 +33,6 @@ class Game:
         if self.get_state() is GameState.WaitingForPlayers:
             await self.blink_player_buttons()
         if self.get_state() is GameState.Ready:
-            asyncio.tasks.create_task(self.voice.speak("Game is starting"))
             await self.start_game()
         elif self.get_state() is GameState.Stopped:
             await self.reset_game()
@@ -60,13 +60,19 @@ class Game:
         logging.info(f"Player finished: {color} ({player.stopwatch.calculated_time})")
         self.finished_players[color] = player.stopwatch.calculated_time
 
-    async def start_game(self):
-        await self.turn_off_non_playing()        
-        self.led_matrix.show(Media.StartSequence, callback=self.start_timers)        
-
-    async def start_timers(self):
+    async def start_game(self):        
+        asyncio.tasks.create_task(self.voice.speak("Game is starting"))
+        await self.turn_off_non_playing()
+        self.lights_are_out = False
+        self.led_matrix.show(Media.StartSequence, callback=self.lights_out)
+        while self.lights_are_out is False:
+            await asyncio.sleep(.01)
         start_time = time.time_ns()
         [await player.start(start_time) for player in self.get_players_ready()]
+
+    def lights_out(self):
+        self.lights_are_out = True
+        
     #async def start_formation_lap(self):
 
 
