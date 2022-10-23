@@ -19,8 +19,9 @@ class FettBox(App):
         
         self.music_player = MusicPlayer()
         self.voice = Voice(self.music_player)
-        self.led_matrix = Display()
-        self.game = Game(self.voice, self.led_matrix)        
+        self.led_matrix = Display()        
+        self.start_button = LedButton("start_button", "white", 6, "START", button_callback=self.start_button_callback)
+        self.game = Game(self.voice, self.led_matrix, self.start_button)        
         self.music_player.f1Theme()
         
 
@@ -33,7 +34,6 @@ class FettBox(App):
 
         top_grid = TopGrid(*self.game.time_modules)
 
-        self.start_button = LedButton("start_button", "white", 6, "START", button_callback=self.start_button_callback)
         await self.start_button.on()
         
         await self.view.dock(top_grid, self.start_button, edge="top")

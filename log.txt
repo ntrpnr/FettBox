@@ -503,3 +503,29 @@ INFO:root:Player joined: green
 INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
 INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
 INFO:root:Start button pressed
+INFO:root:Start button pressed
+INFO:root:Can not start
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:Start button pressed
+INFO:root:Can not start
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:yellow: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: yellow
+INFO:root:Start button pressed
+INFO:root:Start button pressed
+INFO:root:Can not start
+INFO:root:green: 00:00:00 - StopwatchState.Off
+INFO:root:Player joined: green
+INFO:comtypes.client._code_cache:Imported existing <module 'comtypes.gen' from 'C:\\Users\\Erik\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\comtypes\\gen\\__init__.py'>
+INFO:comtypes.client._code_cache:Using writeable comtypes cache directory: 'C:\Users\Erik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\comtypes\gen'
+INFO:root:Start button pressed
+INFO:root:green: 00:00:00 - StopwatchState.Started
+INFO:root:Player finished: green (00:07:55)

@@ -1,5 +1,6 @@
 from enum import Enum
 from display import Display, Media
+from led_button import LedButton
 
 from stopwatch import StopwatchState
 from player_module import PlayerModule
@@ -11,9 +12,10 @@ from voice import Voice
 
 
 class Game:
-    def __init__(self, voice: Voice, led_matrix: Display):
+    def __init__(self, voice: Voice, led_matrix: Display, start_button: LedButton):
         self.voice = voice
         self.led_matrix = led_matrix
+        self.start_button = start_button
         self.time_modules = []
         self.lights_are_out = False
         self.finished_players = {}
@@ -48,7 +50,7 @@ class Game:
             await self.finish_player(color)
 
     async def join_player(self, color):
-        logging.info(f"Player joined: {color}")
+        logging.info(f"Player joined: {color}")        
         await self.voice.speak(f"{color} player joined the game.")
         player: PlayerModule = list(filter(lambda x: (x.stopwatch.color is color), self.time_modules))[0]
         await player.stopwatch.reset()
@@ -63,6 +65,7 @@ class Game:
     async def start_game(self):        
         asyncio.tasks.create_task(self.voice.speak("Game is starting"))
         await self.turn_off_non_playing()
+        await self.start_button.off()
         self.lights_are_out = False
         self.led_matrix.show(Media.StartSequence, callback=self.lights_out)
         while self.lights_are_out is False:
