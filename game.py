@@ -1,6 +1,7 @@
 from enum import Enum
 from display import Display, Media
 from led_button import LedButton
+from music_player import MusicPlayer
 
 from stopwatch import StopwatchState
 from player_module import PlayerModule
@@ -12,13 +13,16 @@ from voice import Voice
 
 
 class Game:
-    def __init__(self, voice: Voice, led_matrix: Display, start_button: LedButton):
+    def __init__(self, voice: Voice, led_matrix: Display, start_button: LedButton, music_player: MusicPlayer):
         self.voice = voice
         self.led_matrix = led_matrix
         self.start_button = start_button
         self.time_modules = []
         self.lights_are_out = False
         self.finished_players = {}
+        self.music_player = music_player                
+        self.music_player.f1Theme()
+        self.music_is_fading = False
 
     def add_player_module(self, module: PlayerModule):
         module.button_callback = self.player_button_pressed
@@ -62,12 +66,17 @@ class Game:
         logging.info(f"Player finished: {color} ({player.stopwatch.calculated_time})")
         self.finished_players[color] = player.stopwatch.calculated_time
 
-    async def start_game(self):        
+    async def start_game(self):
+        self.music_is_fading = True
+        self.music_player.fade(fade_time_ms=9000, fade_callback=self.music_has_faded, stop_music=True)
         asyncio.tasks.create_task(self.voice.speak("Game is starting"))
         await self.turn_off_non_playing()
         await self.start_button.off()
         self.lights_are_out = False
         self.led_matrix.show(Media.StartSequence, callback=self.lights_out)
+        while self.music_is_fading is True:
+            await asyncio.sleep(.01)
+        self.music_player.f1ThemeStart()
         while self.lights_are_out is False:
             await asyncio.sleep(.01)
         start_time = time.time_ns()
@@ -75,6 +84,9 @@ class Game:
 
     def lights_out(self):
         self.lights_are_out = True
+
+    def music_has_faded(self):
+        self.music_is_fading = False
         
     #async def start_formation_lap(self):
 
